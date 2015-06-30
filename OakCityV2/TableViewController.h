@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  OakCityV2
 //
 //  Created by Josh Green on 6/8/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface TableViewController : UITableViewController <UIAlertViewDelegate>
 
+@property (strong, nonatomic) NSArray *jobs;
 
 @end
-

@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		311760D220B980CB53C8E9BC /* libPods-OakCityV2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FC26B7C6CD470A278B1058 /* libPods-OakCityV2.a */; };
 		900988961B26124000A456D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 900988951B26124000A456D3 /* main.m */; };
 		900988991B26124000A456D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 900988981B26124000A456D3 /* AppDelegate.m */; };
-		9009889C1B26124000A456D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9009889B1B26124000A456D3 /* ViewController.m */; };
 		9009889F1B26124000A456D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9009889D1B26124000A456D3 /* Main.storyboard */; };
 		900988A11B26124000A456D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900988A01B26124000A456D3 /* Images.xcassets */; };
 		900988A41B26124000A456D3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900988A21B26124000A456D3 /* LaunchScreen.xib */; };
 		900988B01B26124000A456D3 /* OakCityV2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 900988AF1B26124000A456D3 /* OakCityV2Tests.m */; };
+		900988F21B261E0C00A456D3 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900988F11B261E0C00A456D3 /* TableViewController.m */; };
+		900989121B27F9DD00A456D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900989111B27F9DD00A456D3 /* DetailViewController.m */; };
+		900C1BB61B2923E50065299B /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 900C1BB51B2923E50065299B /* placeholder.jpg */; };
+		900C1BB81B293F3F0065299B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900C1BB71B293F3F0065299B /* CoreLocation.framework */; };
+		904A915E1B42150800476BF1 /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A915D1B42150800476BF1 /* DataObject.m */; };
+		90C38C831B39C74800508C84 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C38C821B39C74800508C84 /* DetailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +33,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18FC26B7C6CD470A278B1058 /* libPods-OakCityV2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OakCityV2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58AF2359700E9BB191918849 /* Pods-OakCityV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OakCityV2.release.xcconfig"; path = "Pods/Target Support Files/Pods-OakCityV2/Pods-OakCityV2.release.xcconfig"; sourceTree = "<group>"; };
+		7340CC3A4B4B667AD7C6B803 /* Pods-OakCityV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OakCityV2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OakCityV2/Pods-OakCityV2.debug.xcconfig"; sourceTree = "<group>"; };
 		900988901B26124000A456D3 /* OakCityV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OakCityV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		900988941B26124000A456D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		900988951B26124000A456D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		900988971B26124000A456D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		900988981B26124000A456D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9009889A1B26124000A456D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9009889B1B26124000A456D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9009889E1B26124000A456D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		900988A01B26124000A456D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		900988A31B26124000A456D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		900988A91B26124000A456D3 /* OakCityV2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OakCityV2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900988AE1B26124000A456D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		900988AF1B26124000A456D3 /* OakCityV2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OakCityV2Tests.m; sourceTree = "<group>"; };
+		900988F01B261E0C00A456D3 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		900988F11B261E0C00A456D3 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		900989101B27F9DD00A456D3 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		900989111B27F9DD00A456D3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		900C1BB51B2923E50065299B /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = ../../../../Downloads/placeholder.jpg; sourceTree = "<group>"; };
+		900C1BB71B293F3F0065299B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		904A915C1B42150800476BF1 /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
+		904A915D1B42150800476BF1 /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
+		90C38C811B39C74800508C84 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		90C38C821B39C74800508C84 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900C1BB81B293F3F0065299B /* CoreLocation.framework in Frameworks */,
+				311760D220B980CB53C8E9BC /* libPods-OakCityV2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +79,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3EA6B93DF824FB5A61A7C74C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18FC26B7C6CD470A278B1058 /* libPods-OakCityV2.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		900988871B26123F00A456D3 = {
 			isa = PBXGroup;
 			children = (
 				900988921B26124000A456D3 /* OakCityV2 */,
 				900988AC1B26124000A456D3 /* OakCityV2Tests */,
 				900988911B26124000A456D3 /* Products */,
+				A010E1330694C38BFA01439B /* Pods */,
+				3EA6B93DF824FB5A61A7C74C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,12 +110,20 @@
 		900988921B26124000A456D3 /* OakCityV2 */ = {
 			isa = PBXGroup;
 			children = (
+				900C1BB71B293F3F0065299B /* CoreLocation.framework */,
 				900988971B26124000A456D3 /* AppDelegate.h */,
 				900988981B26124000A456D3 /* AppDelegate.m */,
-				9009889A1B26124000A456D3 /* ViewController.h */,
-				9009889B1B26124000A456D3 /* ViewController.m */,
-				9009889D1B26124000A456D3 /* Main.storyboard */,
+				900988F01B261E0C00A456D3 /* TableViewController.h */,
+				900988F11B261E0C00A456D3 /* TableViewController.m */,
+				900989101B27F9DD00A456D3 /* DetailViewController.h */,
+				900989111B27F9DD00A456D3 /* DetailViewController.m */,
+				90C38C811B39C74800508C84 /* DetailCell.h */,
+				90C38C821B39C74800508C84 /* DetailCell.m */,
+				904A915C1B42150800476BF1 /* DataObject.h */,
+				904A915D1B42150800476BF1 /* DataObject.m */,
+				900C1BB51B2923E50065299B /* placeholder.jpg */,
 				900988A01B26124000A456D3 /* Images.xcassets */,
+				9009889D1B26124000A456D3 /* Main.storyboard */,
 				900988A21B26124000A456D3 /* LaunchScreen.xib */,
 				900988931B26124000A456D3 /* Supporting Files */,
 			);
@@ -119,6 +156,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A010E1330694C38BFA01439B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7340CC3A4B4B667AD7C6B803 /* Pods-OakCityV2.debug.xcconfig */,
+				58AF2359700E9BB191918849 /* Pods-OakCityV2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 900988B31B26124000A456D3 /* Build configuration list for PBXNativeTarget "OakCityV2" */;
 			buildPhases = (
+				47E70743543973FD1270EB7C /* Check Pods Manifest.lock */,
 				9009888C1B26124000A456D3 /* Sources */,
 				9009888D1B26124000A456D3 /* Frameworks */,
 				9009888E1B26124000A456D3 /* Resources */,
+				0256331DACE3B3E2AE39EE17 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9009889F1B26124000A456D3 /* Main.storyboard in Resources */,
+				900C1BB61B2923E50065299B /* placeholder.jpg in Resources */,
 				900988A41B26124000A456D3 /* LaunchScreen.xib in Resources */,
 				900988A11B26124000A456D3 /* Images.xcassets in Resources */,
 			);
@@ -214,13 +263,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0256331DACE3B3E2AE39EE17 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OakCityV2/Pods-OakCityV2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E70743543973FD1270EB7C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9009888C1B26124000A456D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9009889C1B26124000A456D3 /* ViewController.m in Sources */,
+				904A915E1B42150800476BF1 /* DataObject.m in Sources */,
+				900989121B27F9DD00A456D3 /* DetailViewController.m in Sources */,
+				90C38C831B39C74800508C84 /* DetailCell.m in Sources */,
 				900988991B26124000A456D3 /* AppDelegate.m in Sources */,
+				900988F21B261E0C00A456D3 /* TableViewController.m in Sources */,
 				900988961B26124000A456D3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,8 +426,10 @@
 		};
 		900988B41B26124000A456D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7340CC3A4B4B667AD7C6B803 /* Pods-OakCityV2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = OakCityV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,8 +438,10 @@
 		};
 		900988B51B26124000A456D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58AF2359700E9BB191918849 /* Pods-OakCityV2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				INFOPLIST_FILE = OakCityV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,6 +501,7 @@
 				900988B51B26124000A456D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		900988B61B26124000A456D3 /* Build configuration list for PBXNativeTarget "OakCityV2Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +510,7 @@
 				900988B81B26124000A456D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
