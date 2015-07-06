@@ -17,5 +17,4 @@
 @property (nonatomic, readonly) NSString *logo;
 
 - (instancetype) initWithDictionary : (NSDictionary *)myDict;
-
 @end

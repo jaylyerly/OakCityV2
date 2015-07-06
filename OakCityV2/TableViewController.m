@@ -12,7 +12,6 @@
 #import "DetailCell.h"
 #import "Job.h"
 #import "AFNetworking/UIImageView+AFNetworking.h"
-
 #define LANGUAGE @"PHP"
 #define TOWN @"San+Francisco"
 
@@ -45,19 +44,19 @@
         //Alert on failure to fetch JSON
         else {
             UIAlertView* alert = [[UIAlertView alloc]
-                                       initWithTitle: @"Failed to retrieve data" message: nil delegate: self
-                                       cancelButtonTitle: @"cancel" otherButtonTitles: @"Retry", nil];
+                                  initWithTitle: @"Failed to retrieve data" message: nil delegate: self
+                                  cancelButtonTitle: @"cancel" otherButtonTitles: @"Retry", nil];
             [alert show];
         }
     }
-    
-    //Alert on fundemental errors
-    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         UIAlertView *aV = [[UIAlertView alloc]
-                                   initWithTitle:@"Error" message:[error localizedDescription] delegate: nil
-                                                   cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-         [aV show];
-     }];
+     
+     //Alert on fundemental errors
+                                     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                                         UIAlertView *aV = [[UIAlertView alloc]
+                                                            initWithTitle:@"Error" message:[error localizedDescription] delegate: nil
+                                                            cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                                         [aV show];
+                                     }];
     [operation start];
     
 }
