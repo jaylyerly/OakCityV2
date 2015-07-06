@@ -15,8 +15,8 @@
 @property (weak, nonatomic) NSString *desc;
 @property (weak, nonatomic) NSString *url;
 //@property (strong, nonatomic) UIScrollView *scrollView;
-@property (strong, nonatomic) IBOutlet UIWebView *titleLabel;
-@property (strong, nonatomic) IBOutlet UIWebView *companyLabel;
-@property (strong, nonatomic) IBOutlet UIWebView *urlLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *companyLabel;
+@property (strong, nonatomic) IBOutlet UITextView *urlTextView;
 @property (strong, nonatomic) IBOutlet UIWebView *descriptionLabel;
 @end
