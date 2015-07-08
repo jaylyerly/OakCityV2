@@ -10,11 +10,12 @@
 
 @interface Job : NSObject
 
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSString *company;
-@property (nonatomic, readonly) NSString *desc;
-@property (nonatomic, readonly) NSString *url;
-@property (nonatomic, readonly) NSString *logo;
+@property (nonatomic, readwrite) NSString *title;
+@property (nonatomic, readwrite) NSString *company;
+@property (nonatomic, readwrite) NSString *desc;
+@property (nonatomic, readwrite) NSString *url;
+@property (nonatomic, readwrite) NSString *logo;
 
 - (instancetype) initWithDictionary : (NSDictionary *)myDict;
+
 @end

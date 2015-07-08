@@ -10,8 +10,6 @@
 
 @interface JobManager : AFURLSessionManager<NSURLSessionTaskDelegate>
 
-@property (strong, nonatomic) NSArray *jobs;
-
-- (AFURLSessionManager *)searchJobs;
++ (AFURLSessionManager *)searchJobs;
 
 @end

@@ -13,7 +13,7 @@
 
 @implementation JobManager
 
-- (AFURLSessionManager *)searchJobs
++ (AFURLSessionManager *)searchJobs
 {
     static AFURLSessionManager *searchJobs = nil;
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -23,21 +23,11 @@
     NSURL *url = [NSURL URLWithString:urlAsString];
     NSURLRequest *request = [NSURLRequest requestWithURL: url];
     [[searchJobs dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        self.jobs  = (NSArray *)responseObject;
         NSLog(@"%@", responseObject);
         
     }]resume];
     
     return searchJobs;
 }
-
-/*
- Job *job = [[Job alloc] init];
- job.title = [self.jobs valueForKey: @"title"];
- job.company = [self.jobs valueForKey: @"company"];
- job.url = [self.jobs valueForKey: @"company_url"];
- job.logo = [self.jobs valueForKey: @"company_logo"];
- job.desc = [self.jobs valueForKey: @"description"];
- */
 
 @end

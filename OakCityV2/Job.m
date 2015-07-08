@@ -9,13 +9,13 @@
 #import "Job.h"
 
 @interface Job ()
-
+/*
 @property (nonatomic, readwrite) NSString *title;
 @property (nonatomic, readwrite) NSString *company;
 @property (nonatomic, readwrite) NSString *desc;
 @property (nonatomic, readwrite) NSString *url;
 @property (nonatomic, readwrite) NSString *logo;
-
+*/
 @end
 
 @implementation Job
