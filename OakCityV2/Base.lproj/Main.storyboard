@@ -80,7 +80,7 @@
                                     <outlet property="companyLabel" destination="MUI-wS-Rew" id="x7q-gA-Csz"/>
                                     <outlet property="logoImageView" destination="kHM-d6-pRf" id="FU2-bl-7WN"/>
                                     <outlet property="titleLabel" destination="7pc-82-iQk" id="Vnw-Kw-BMr"/>
-                                    <segue destination="ez0-fm-ay0" kind="show" identifier="Identifier" id="oHU-AL-Jlm"/>
+                                    <segue destination="ez0-fm-ay0" kind="show" identifier="detailViewIdentifier" id="oHU-AL-Jlm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

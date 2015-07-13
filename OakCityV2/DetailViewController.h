@@ -7,15 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Job.h"
 @interface DetailViewController : UIViewController
 
-@property (weak, nonatomic) NSString *ttitle;
-@property (weak, nonatomic) NSString *company;
-@property (weak, nonatomic) NSString *desc;
-@property (weak, nonatomic) NSString *url;
+@property (strong, nonatomic) NSString *ttitle;
+@property (strong, nonatomic) NSString *company;
+@property (strong, nonatomic) NSString *desc;
+@property (strong, nonatomic) NSString *url;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *companyLabel;
 @property (strong, nonatomic) IBOutlet UITextView *urlTextView;
 @property (strong, nonatomic) IBOutlet UIWebView *descriptionLabel;
+- (void)configureView:(Job *)theJob atIndexPath:(NSIndexPath *)indexPath;
 @end

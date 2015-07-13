@@ -10,4 +10,14 @@
 
 @implementation DetailCell
 
+- (void)configureCell:(Job *)aJob atIndexPath:(NSIndexPath *)indexPath {
+    [self.titleLabel setText:aJob.title];
+    [self.companyLabel setText:aJob.company];
+    
+    if (aJob.logo != (NSString *)[NSNull null]) {
+        [self.logoImageView setImageWithURL:[NSURL URLWithString:aJob.logo] placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
+    } else {
+        [self.logoImageView setImage:[UIImage imageNamed:@"placeholder.jpg"]];
+    }
+}
 @end

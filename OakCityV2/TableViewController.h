@@ -10,6 +10,6 @@
 
 @interface TableViewController : UITableViewController <UIAlertViewDelegate>
 
-@property (strong, nonatomic) NSMutableArray *jobs;
+@property (strong, nonatomic) NSArray *jobs;
 
 @end

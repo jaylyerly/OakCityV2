@@ -33,20 +33,18 @@
     
     //Parse JSON
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.jobs  = [NSMutableArray new];
+        NSMutableArray *jobs  = [NSMutableArray new];
         NSArray *responseArray = (NSArray *)responseObject;
-        
         for (NSDictionary *responseDict in responseArray) {
-        Job* job = [[Job alloc] initWithDictionary:responseDict];
-        [self.jobs addObject:job];
+            Job* job = [[Job alloc] initWithDictionary:responseDict];
+            [jobs addObject:job];
         }
-        
-        if([self.jobs count] > 0) {
-            [self.tableView reloadData];
-        }
+        self.jobs=[NSArray arrayWithArray:jobs];
 
+        [self.tableView reloadData];
+        
         //Alert on failure to fetch JSON
-        else {
+        if([self.jobs count] == 0) {
             UIAlertView* alert = [[UIAlertView alloc]
                                   initWithTitle: @"Failed to retrieve data" message: nil delegate: self
                                   cancelButtonTitle: @"cancel" otherButtonTitles: @"Retry", nil];
@@ -67,9 +65,7 @@
 
 //Alert View
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSString *button = [alertView buttonTitleAtIndex:buttonIndex];
-    
-    if([button isEqualToString:@"Retry"]) {
+    if(buttonIndex == alertView.firstOtherButtonIndex) {
         //Fetch JSON
         NSString *urlAsString = [NSString stringWithFormat:@"https://jobs.github.com/positions.json?description=%@&location=%@", LANGUAGE, TOWN];
         NSURL *url = [NSURL URLWithString:urlAsString];
@@ -79,20 +75,18 @@
         
         //Parse JSON
         [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-            self.jobs  = [NSMutableArray new];
+            NSMutableArray *jobs  = [NSMutableArray new];
             NSArray *responseArray = (NSArray *)responseObject;
-            
             for (NSDictionary *responseDict in responseArray) {
                 Job* job = [[Job alloc] initWithDictionary:responseDict];
-                [self.jobs addObject:job];
+                [jobs addObject:job];
             }
+            self.jobs=[NSArray arrayWithArray:jobs];
             
-            if([self.jobs count] > 0) {
-                [self.tableView reloadData];
-            }
-            
+            [self.tableView reloadData];
+
             //Alert on failure to fetch JSON
-            else {
+            if([self.jobs count] == 0) {
                 UIAlertView* alert = [[UIAlertView alloc]
                                       initWithTitle: @"Failed to retrieve data" message: nil delegate: self
                                       cancelButtonTitle: @"cancel" otherButtonTitles: @"Retry", nil];
@@ -123,20 +117,18 @@
     
     //Parse JSON
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-        self.jobs  = [NSMutableArray new];
+        NSMutableArray *jobs  = [NSMutableArray new];
         NSArray *responseArray = (NSArray *)responseObject;
-        
         for (NSDictionary *responseDict in responseArray) {
             Job* job = [[Job alloc] initWithDictionary:responseDict];
-            [self.jobs addObject:job];
+            [jobs addObject:job];
         }
+        self.jobs=[NSArray arrayWithArray:jobs];
         
-        if([self.jobs count] > 0) {
-            [self.tableView reloadData];
-        }
+        [self.tableView reloadData];
         
         //Alert on failure to fetch JSON
-        else {
+        if([self.jobs count] == 0) {
             UIAlertView* alert = [[UIAlertView alloc]
                                   initWithTitle: @"Failed to retrieve data" message: nil delegate: self
                                   cancelButtonTitle: @"cancel" otherButtonTitles: @"Retry", nil];
@@ -174,41 +166,23 @@ estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //Fill TableView
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell" forIndexPath:indexPath];
-    
     Job *aJob = self.jobs[indexPath.row];
-    [cell.titleLabel setText:aJob.title];
-    [cell.companyLabel setText:aJob.company];
-    if (aJob.logo != (NSString *)[NSNull null]) {
-        [cell.logoImageView setImageWithURL:[NSURL URLWithString:aJob.logo] placeholderImage:[UIImage imageNamed:@"placeholder.jpg"]];
-    }
-    else {
-        [cell.logoImageView setImage:[UIImage imageNamed:@"placeholder.jpg"]];
-    }
+    [cell configureCell:aJob atIndexPath: indexPath];
+
     return cell;
 }
 
 //Fill DetailView
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"Identifier"]) {
-        DetailViewController *DetailVC = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"detailViewIdentifier"]) {
+        DetailViewController *detailVC = segue.destinationViewController;
         
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         Job *theJob = self.jobs[indexPath.row];
-
-        DetailVC.ttitle = theJob.title;
         
-        DetailVC.company = theJob.company;
+        [detailVC configureView:theJob atIndexPath: indexPath];
         
-        if (theJob.url != (NSString *)[NSNull null]) {
-            DetailVC.url = theJob.url;
-        }
-        
-        else {
-            DetailVC.url = @"No URL Provided";
-        }
-        
-        DetailVC.desc = theJob.desc;
     }
     
 }

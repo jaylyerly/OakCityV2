@@ -43,6 +43,10 @@
     XCTAssert(YES, @"Pass");
     Job *job = [[Job alloc] initWithDictionary : self.sampleDictionary];
     XCTAssert([job.title isEqualToString: self.sampleDictionary[@"title"]], @"Title Fails");
+    XCTAssert([job.company isEqualToString: self.sampleDictionary[@"company"]], @"Company Fails");
+    XCTAssert([job.logo isEqualToString: self.sampleDictionary[@"company_logo"]], @"Logo Fails");
+    XCTAssert([job.url isEqualToString: self.sampleDictionary[@"company_url"]], @"URL Fails");
+    XCTAssert([job.desc isEqualToString: self.sampleDictionary[@"title"]], @"Description Fails");
 }
 
 

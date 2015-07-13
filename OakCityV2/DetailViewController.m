@@ -12,13 +12,24 @@
 @implementation DetailViewController
 
 
--(void)viewDidLoad
-{
-    _titleLabel.text = self.ttitle;
-    _companyLabel.text = self.company;
-    _urlTextView.text = self.url;
-    [_descriptionLabel loadHTMLString:self.desc baseURL:nil];
+-(void)viewDidLoad {
+    self.titleLabel.text = self.ttitle;
+    self.companyLabel.text = self.company;
+    self.urlTextView.text = self.url;
+    [self.descriptionLabel loadHTMLString:self.desc baseURL:nil];
     self.automaticallyAdjustsScrollViewInsets = NO;
+}
+
+- (void)configureView:(Job *)theJob atIndexPath:(NSIndexPath *)indexPath {
+    self.ttitle = theJob.title;
+    self.company = theJob.company;
+    if (theJob.url != (NSString *)[NSNull null]) {
+        self.url = theJob.url;
+    }
+    else {
+        self.url = @"No URL Provided";
+    }
+    self.desc = theJob.desc;
 }
 
 @end
