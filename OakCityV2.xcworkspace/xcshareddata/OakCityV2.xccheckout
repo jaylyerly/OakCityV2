@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>427172DA-B097-4AFB-96A3-EE22EAFE78A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OakCityV2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F27C236AE6C33389CF1930EB99B585B137DD10FC</key>
+		<string>https://github.com/joshgreen727/OakCityV2.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OakCityV2.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F27C236AE6C33389CF1930EB99B585B137DD10FC</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/joshgreen727/OakCityV2.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F27C236AE6C33389CF1930EB99B585B137DD10FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F27C236AE6C33389CF1930EB99B585B137DD10FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OakCityV2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

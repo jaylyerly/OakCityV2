@@ -18,8 +18,10 @@
 		900989121B27F9DD00A456D3 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900989111B27F9DD00A456D3 /* DetailViewController.m */; };
 		900C1BB61B2923E50065299B /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 900C1BB51B2923E50065299B /* placeholder.jpg */; };
 		900C1BB81B293F3F0065299B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 900C1BB71B293F3F0065299B /* CoreLocation.framework */; };
-		904A915E1B42150800476BF1 /* DataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A915D1B42150800476BF1 /* DataObject.m */; };
+		904A915E1B42150800476BF1 /* Job.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A915D1B42150800476BF1 /* Job.m */; };
+		904A91601B4440C500476BF1 /* DataObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 904A915F1B4440C500476BF1 /* DataObjectTest.m */; };
 		90C38C831B39C74800508C84 /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90C38C821B39C74800508C84 /* DetailCell.m */; };
+		90CAB0C31B4B172200AEF5D0 /* JobManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CAB0C21B4B172200AEF5D0 /* JobManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +55,13 @@
 		900989111B27F9DD00A456D3 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		900C1BB51B2923E50065299B /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = placeholder.jpg; path = ../../../../Downloads/placeholder.jpg; sourceTree = "<group>"; };
 		900C1BB71B293F3F0065299B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		904A915C1B42150800476BF1 /* DataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataObject.h; sourceTree = "<group>"; };
-		904A915D1B42150800476BF1 /* DataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObject.m; sourceTree = "<group>"; };
+		904A915C1B42150800476BF1 /* Job.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Job.h; sourceTree = "<group>"; };
+		904A915D1B42150800476BF1 /* Job.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Job.m; sourceTree = "<group>"; };
+		904A915F1B4440C500476BF1 /* DataObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataObjectTest.m; sourceTree = "<group>"; };
 		90C38C811B39C74800508C84 /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
 		90C38C821B39C74800508C84 /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		90CAB0C11B4B172200AEF5D0 /* JobManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JobManager.h; sourceTree = "<group>"; };
+		90CAB0C21B4B172200AEF5D0 /* JobManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JobManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +124,10 @@
 				900989111B27F9DD00A456D3 /* DetailViewController.m */,
 				90C38C811B39C74800508C84 /* DetailCell.h */,
 				90C38C821B39C74800508C84 /* DetailCell.m */,
-				904A915C1B42150800476BF1 /* DataObject.h */,
-				904A915D1B42150800476BF1 /* DataObject.m */,
+				904A915C1B42150800476BF1 /* Job.h */,
+				904A915D1B42150800476BF1 /* Job.m */,
+				90CAB0C11B4B172200AEF5D0 /* JobManager.h */,
+				90CAB0C21B4B172200AEF5D0 /* JobManager.m */,
 				900C1BB51B2923E50065299B /* placeholder.jpg */,
 				900988A01B26124000A456D3 /* Images.xcassets */,
 				9009889D1B26124000A456D3 /* Main.storyboard */,
@@ -143,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				900988AF1B26124000A456D3 /* OakCityV2Tests.m */,
+				904A915F1B4440C500476BF1 /* DataObjectTest.m */,
 				900988AD1B26124000A456D3 /* Supporting Files */,
 			);
 			path = OakCityV2Tests;
@@ -301,10 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				904A915E1B42150800476BF1 /* DataObject.m in Sources */,
+				904A915E1B42150800476BF1 /* Job.m in Sources */,
 				900989121B27F9DD00A456D3 /* DetailViewController.m in Sources */,
 				90C38C831B39C74800508C84 /* DetailCell.m in Sources */,
 				900988991B26124000A456D3 /* AppDelegate.m in Sources */,
+				90CAB0C31B4B172200AEF5D0 /* JobManager.m in Sources */,
 				900988F21B261E0C00A456D3 /* TableViewController.m in Sources */,
 				900988961B26124000A456D3 /* main.m in Sources */,
 			);
@@ -314,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				904A91601B4440C500476BF1 /* DataObjectTest.m in Sources */,
 				900988B01B26124000A456D3 /* OakCityV2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
