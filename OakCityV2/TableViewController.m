@@ -16,6 +16,7 @@
 #define TOWN @"San+Francisco"
 
 @interface TableViewController ()
+@property (strong, nonatomic) NSArray *jobs;
 
 @end
 
@@ -167,7 +168,7 @@ estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DetailCell" forIndexPath:indexPath];
     Job *aJob = self.jobs[indexPath.row];
-    [cell configureCell:aJob atIndexPath: indexPath];
+    [cell configureCell:aJob];
 
     return cell;
 }
@@ -181,7 +182,7 @@ estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
         
         Job *theJob = self.jobs[indexPath.row];
         
-        [detailVC configureView:theJob atIndexPath: indexPath];
+        [detailVC configureView:theJob];
         
     }
     

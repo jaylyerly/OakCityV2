@@ -13,23 +13,21 @@
 
 
 -(void)viewDidLoad {
-    self.titleLabel.text = self.ttitle;
-    self.companyLabel.text = self.company;
-    self.urlTextView.text = self.url;
-    [self.descriptionLabel loadHTMLString:self.desc baseURL:nil];
+    [super viewDidLoad];
+    self.titleLabel.text = self.theJob.title;
+    self.companyLabel.text = self.theJob.company;
+    if(self.theJob.url != (NSString *)[NSNull null]) {
+        self.urlTextView.text = self.theJob.url;
+    }
+    else {
+        self.urlTextView.text = @"No URL Provided";
+    }
+    [self.descriptionLabel loadHTMLString:self.theJob.desc baseURL:nil];
     self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
-- (void)configureView:(Job *)theJob atIndexPath:(NSIndexPath *)indexPath {
-    self.ttitle = theJob.title;
-    self.company = theJob.company;
-    if (theJob.url != (NSString *)[NSNull null]) {
-        self.url = theJob.url;
-    }
-    else {
-        self.url = @"No URL Provided";
-    }
-    self.desc = theJob.desc;
+- (void)configureView:(Job *)theJob {
+    self.theJob = theJob;
 }
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation DetailCell
 
-- (void)configureCell:(Job *)aJob atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(Job *)aJob {
     [self.titleLabel setText:aJob.title];
     [self.companyLabel setText:aJob.company];
     

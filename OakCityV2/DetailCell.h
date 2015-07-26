@@ -14,5 +14,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *companyLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImageView;
-- (void)configureCell:(Job *)aJob atIndexPath:(NSIndexPath *)indexPath;
+- (void)configureCell:(Job *)aJob;
 @end

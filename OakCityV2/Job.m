@@ -22,7 +22,7 @@
 
 - (instancetype) initWithDictionary : (NSDictionary *)myDict {
     self = [super init];
-    if (self){
+    if (self) {
         _title = myDict[@"title"];
         _company = myDict[@"company"];
         _desc = myDict[@"description"];

@@ -33,20 +33,13 @@
     };
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
 - (void)testDictionaryParse {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
     Job *job = [[Job alloc] initWithDictionary : self.sampleDictionary];
     XCTAssert([job.title isEqualToString: self.sampleDictionary[@"title"]], @"Title Fails");
     XCTAssert([job.company isEqualToString: self.sampleDictionary[@"company"]], @"Company Fails");
     XCTAssert([job.logo isEqualToString: self.sampleDictionary[@"company_logo"]], @"Logo Fails");
     XCTAssert([job.url isEqualToString: self.sampleDictionary[@"company_url"]], @"URL Fails");
-    XCTAssert([job.desc isEqualToString: self.sampleDictionary[@"title"]], @"Description Fails");
+    XCTAssert([job.desc isEqualToString: self.sampleDictionary[@"description"]], @"Description Fails");
 }
 
 
